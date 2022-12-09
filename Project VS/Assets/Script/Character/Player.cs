@@ -95,4 +95,6 @@ public class Player : Character
         yield return new WaitForSeconds(5);
         onBooster = false;
     }
+
+    public bool GetBooster() { return onBooster; }
 }
