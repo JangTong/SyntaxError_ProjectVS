@@ -6,13 +6,24 @@ using UnityEngine;
 
 public class Player : Character
 {
-    int direction = 0;
-    int level = 1;
-    bool isHit = false;
-    bool onBooster = false;
+    int direction;
+    int playerLev;
+    int maxExp;
+    int exp;
+    bool isHit;
+    bool onBooster;
+    int boosterCoolTime;
 
-    private void Start()
+    private void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        direction = 0;
+        playerLev = 1;
+        exp = 0;
+        isHit = false;
+        onBooster = false;
+        boosterCoolTime = 5;
+        ResetHealth();
     }
 
     void Update()
@@ -84,17 +95,24 @@ public class Player : Character
 
     IEnumerator Booster()
     {
+        //booster on
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         onBooster = true;
         moveSpeed *= 5;
         isHit = true;
         yield return new WaitForSeconds(0.2f);
+        //booster off and cooling time start
         spriteRenderer.color = new Color(1, 1, 1, 1);
         moveSpeed /= 5;
         isHit = false;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(boosterCoolTime);
         onBooster = false;
     }
 
     public bool GetBooster() { return onBooster; }
+    public void SetBooster(bool onBooster) { this.onBooster = onBooster; }
+    public int GetBoosterCoolTime() { return boosterCoolTime; }
+    public void SetBoosterCoolTime(int boosterCoolTime) { this.boosterCoolTime = boosterCoolTime; }
+    public bool GetIsHit() { return isHit; }
+    public void SetIsHit(bool isHit) { this.isHit = isHit; }
 }

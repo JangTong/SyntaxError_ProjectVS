@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SampleGunProjectile : WeaponBase
+public class GunProjectile : WeaponBase
 {
     void Update()
     {

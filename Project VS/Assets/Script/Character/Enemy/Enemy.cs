@@ -42,8 +42,7 @@ public class Enemy : Character
         if (collision.gameObject.tag == "Player")
         {
             Player player = collision.gameObject.GetComponent<Player>();
-            OnHit((int)player.GetATKPower());
-            player.OnHit(GetATKPower());
+            if (player.GetIsHit() && player.GetBooster()) OnHit(player.GetATKPower());
         }
 
     }
