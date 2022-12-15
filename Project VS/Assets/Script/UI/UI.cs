@@ -7,18 +7,20 @@ public class UI : MonoBehaviour
 {
     public Slider health;
     public Slider boost;
+    public Slider exp;
     private float boostcurtime;
 
     void Start()
     {
         health.maxValue = Player.Instance.GetMaxHealth();
         boost.maxValue = Player.Instance.GetBoosterCoolTime();
+        exp.maxValue = Player.Instance.maxExp;
     }
 
     void Update()
     {
-        health.value = Player.Instance.GetHealth();
-        if(Player.Instance.GetBooster())
+        health.value = Player.Instance.GetHealth(); //health
+        if(Player.Instance.GetBooster())            //booster
         {
             if(boostcurtime < boost.maxValue)
             {
@@ -31,5 +33,6 @@ public class UI : MonoBehaviour
             boostcurtime = 0;
             boost.value = boost.maxValue;
         }
+        exp.value = Player.Instance.exp;            //exp
     }
 }
