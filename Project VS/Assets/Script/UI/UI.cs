@@ -7,18 +7,29 @@ public class UI : MonoBehaviour
 {
     public Slider health;
     public Slider boost;
-    private bool boolboost;
+    private float boostcurtime;
 
     void Start()
     {
         health.maxValue = Player.Instance.GetMaxHealth();
+        boost.maxValue = Player.Instance.GetBoosterCoolTime();
     }
 
     void Update()
     {
         health.value = Player.Instance.GetHealth();
-        boolboost = Player.Instance.GetBooster();
-        if(boolboost == true) boost.value = 0;
-        else boost.value = 1;
+        if(Player.Instance.GetBooster())
+        {
+            if(boostcurtime < boost.maxValue)
+            {
+                boostcurtime += Time.deltaTime;
+                boost.value = boostcurtime;
+            }
+        }
+        else
+        {
+            boostcurtime = 0;
+            boost.value = boost.maxValue;
+        }
     }
 }
