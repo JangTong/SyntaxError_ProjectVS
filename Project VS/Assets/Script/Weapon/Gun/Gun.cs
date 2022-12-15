@@ -12,7 +12,7 @@ public class Gun : WeaponBase
 
     void Update()
     {
-        damage = plComp.GetATKPower();
+        damage = Player.Instance.GetATKPower();
     }
 
     void Fire(float damage, float velocity)

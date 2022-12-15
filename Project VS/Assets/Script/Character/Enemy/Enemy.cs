@@ -54,7 +54,7 @@ public class Enemy : Character
         {
             health = 0;
             isDie = true;
-            Destroy(this.gameObject); //None Objectpolling
+            Destroy(this.gameObject);
         }
         else health -= damage;
 

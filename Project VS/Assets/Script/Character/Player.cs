@@ -7,28 +7,41 @@ using UnityEngine;
 public class Player : Character
 {
     int direction;
-    int playerLev;
-    int maxExp;
-    int exp;
+    public int playerLev;
+    public int maxExp;
+    public int exp;
     bool isHit;
     bool onBooster;
     int boosterCoolTime;
+    static Player instance = null;
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        if(instance == null)instance = this;
+        else Destroy(this.gameObject);
+
+        base.Awake();
+
         direction = 0;
         playerLev = 1;
         exp = 0;
         isHit = false;
         onBooster = false;
         boosterCoolTime = 5;
-        ResetHealth();
     }
 
     void Update()
     {
         MovePlayer();
+    }
+
+    public static Player Instance
+    {
+        get
+        {
+            if(instance != null) return instance;
+            return null;
+        }
     }
 
     private void MovePlayer()
@@ -101,6 +114,7 @@ public class Player : Character
         moveSpeed *= 5;
         isHit = true;
         yield return new WaitForSeconds(0.2f);
+
         //booster off and cooling time start
         spriteRenderer.color = new Color(1, 1, 1, 1);
         moveSpeed /= 5;

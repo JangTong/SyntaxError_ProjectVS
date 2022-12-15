@@ -24,7 +24,7 @@ public class Character : MonoBehaviour
     public void ResetHealth() { health = maxHealth; }
 
 
-    private void Awake()
+    protected void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         ResetHealth();

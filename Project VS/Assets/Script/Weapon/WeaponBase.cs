@@ -5,8 +5,6 @@ using UnityEngine;
 public class WeaponBase : MonoBehaviour
 {
     [SerializeField] protected GameObject projectile;
-    [SerializeField] protected GameObject player;
-    [SerializeField] protected Player plComp;
     [SerializeField] protected float damage;
     [SerializeField] protected float velocity;
     [SerializeField] protected float rateOfFire;
@@ -25,6 +23,5 @@ public class WeaponBase : MonoBehaviour
     private void Awake()
     {
         weaponLev = 0;
-        plComp = gameObject.GetComponent<Player>();
     }
 }
