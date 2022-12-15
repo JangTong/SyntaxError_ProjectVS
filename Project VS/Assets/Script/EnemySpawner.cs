@@ -19,7 +19,10 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             Vector3 spawnPos = GetRandomPosition(); //·£´ý À§Ä¡ return
-            GameObject instance = Instantiate(enemy[Random.Range(0,enemy.Length)], spawnPos, Quaternion.identity);
+            if (!Player.Instance.isDie)
+            {
+                GameObject instance = Instantiate(enemy[Random.Range(0, enemy.Length)], spawnPos, Quaternion.identity);
+            }
             yield return new WaitForSeconds(1f);
         }
     }

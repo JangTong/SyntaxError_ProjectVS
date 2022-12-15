@@ -88,8 +88,7 @@ public class Player : Character
             health = 0;
             isDie = true;
             isHit = true;
-            StartCoroutine(OffHit());
-            Destroy(this.gameObject); //None Objectpolling
+            gameObject.SetActive(false);
         }
         else if (!isHit)
         {
