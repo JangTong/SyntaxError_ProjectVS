@@ -9,10 +9,15 @@ public class UI : MonoBehaviour
     public Slider boost;
     private bool boolboost;
 
+    void Start()
+    {
+        health.maxValue = Player.Instance.GetMaxHealth();
+    }
+
     void Update()
     {
-        health.value = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().GetHealth();
-        boolboost = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().GetBooster();
+        health.value = Player.Instance.GetHealth();
+        boolboost = Player.Instance.GetBooster();
         if(boolboost == true) boost.value = 0;
         else boost.value = 1;
     }
