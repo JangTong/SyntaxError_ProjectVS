@@ -8,6 +8,7 @@ TagManager:
   - ProjectileBorder
   - PlayerProjectile
   - Enemy
+  - PlayerDmgField
   layers:
   - Default
   - TransparentFX
