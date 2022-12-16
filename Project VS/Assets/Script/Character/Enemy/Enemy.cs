@@ -8,10 +8,12 @@ public class Enemy : Character
     [SerializeField] protected Transform player;
     [SerializeField] protected int enemyScore;
     [SerializeField] protected int dropExp;
+    Color defaultColor;
 
     protected void Start()
     {
         player = GameObject.Find("Player").GetComponent<Transform>();
+        defaultColor = spriteRenderer.color;
     }
 
     void Update()
@@ -57,7 +59,7 @@ public class Enemy : Character
 
     protected void OffHit()
     {
-        spriteRenderer.color = new Color(1, 1, 1, 1);
+        spriteRenderer.color = defaultColor;
     }
 
     protected void Die()

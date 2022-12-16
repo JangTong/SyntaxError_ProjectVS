@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyA_1 : Enemy
+public class EnemyStriker : Enemy
 {
     Vector2 dir;
 
@@ -10,11 +10,11 @@ public class EnemyA_1 : Enemy
     {
         base.Start();
         dir = (player.position - transform.position).normalized;
-        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90);
     }
 
     void Update()
     {
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90);
         transform.Translate(dir.normalized * moveSpeed * Time.deltaTime, Space.World);
     }
 }

@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemyArr_270;
     public GameObject[] enemyArr_300;
     public GameObject enemyBoss;
+
     private BoxCollider2D area;
 
 
@@ -34,7 +35,7 @@ public class EnemySpawner : MonoBehaviour
                 if (GameManager.Instance.GetTimer() < 30)
                 {
                     GameObject instance = Instantiate(enemyArr_30[Random.Range(0, enemyArr_30.Length)], spawnPos, Quaternion.identity);
-                    yield return new WaitForSeconds(0.7f);
+                    yield return new WaitForSeconds(0.7f); //delay
                 }
                 else if(GameManager.Instance.GetTimer() < 60)
                 {
