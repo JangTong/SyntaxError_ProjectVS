@@ -3117,6 +3117,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2653031616179527127, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653031616179527127, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -0.2897587
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653031616179527127, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: -0.2185863
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653031616179527127, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -0.4036109
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653031616179527127, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 0.28975874
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653031616179527127, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -0.21858627
+      objectReference: {fileID: 0}
     - target: {fileID: 3641901645484465140, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
       propertyPath: moveSpeed
       value: 4
