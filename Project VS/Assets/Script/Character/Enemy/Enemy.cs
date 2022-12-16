@@ -54,6 +54,7 @@ public class Enemy : Character
         {
             health = 0;
             isDie = true;
+            Player.Instance.exp += 1;
             Destroy(this.gameObject);
         }
         else health -= damage;

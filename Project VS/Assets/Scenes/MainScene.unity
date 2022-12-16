@@ -1863,11 +1863,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4545554280846714189, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
       propertyPath: velocity
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4545554280846714189, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4545554280846714189, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: projectile.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545554280846714189, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: projectile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4173369573684702175, guid: 86df09c394b14124ba74d9abc4f63846, type: 3}
+    - target: {fileID: 4545554280846714189, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: projectile.Array.data[1]
+      value: 
+      objectReference: {fileID: 4173369573684702175, guid: c58b76ff7fc48ba4a9771f99ed089ddb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+--- !u!1 &2653031615731198375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2653031616179527116, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+  m_PrefabInstance: {fileID: 2653031615731198374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2653031615731198376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2653031615731198375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea78e231864f73449f159cd5263b009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile:
+  - {fileID: 4173369573684702175, guid: 86df09c394b14124ba74d9abc4f63846, type: 3}
+  damage: 0
+  velocity: 0
+  rateOfFire: 0
+  projectileSize: 0
+  weaponLev: 0

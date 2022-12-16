@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponBase : MonoBehaviour
 {
-    [SerializeField] protected GameObject projectile;
+    [SerializeField] protected GameObject[] projectile;
     [SerializeField] protected float damage;
     [SerializeField] protected float velocity;
     [SerializeField] protected float rateOfFire;
