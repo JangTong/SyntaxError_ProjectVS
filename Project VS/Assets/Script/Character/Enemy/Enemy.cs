@@ -53,7 +53,6 @@ public class Enemy : Character
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         if (health <= damage) Die();
         else health -= damage;
-        SoundManager.Instance.HitSound();
 
         Invoke("OffHit", 0.1f);
     }
@@ -69,6 +68,7 @@ public class Enemy : Character
         isDie = true;
         Player.Instance.exp += dropExp;
         GameManager.Instance.gameScore += enemyScore;
+        SoundManager.Instance.HitSound();
         Destroy(this.gameObject);
     }
 }

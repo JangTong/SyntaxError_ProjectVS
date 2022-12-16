@@ -99,7 +99,7 @@ public class EnemySpawner : MonoBehaviour
         {
             Vector3 spawnPos = GetRandomPosition();
             GameObject instance = Instantiate(healItem, spawnPos, Quaternion.identity);
-            yield return new WaitForSeconds(30f);
+            yield return new WaitForSeconds(20f);
         }
     }
 
