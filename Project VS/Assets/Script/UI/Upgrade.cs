@@ -35,7 +35,7 @@ public class Upgrade : MonoBehaviour
             {
                 for(int i = 0; i<3; i++)
                 {
-                    upgrades[i] = Random.Range(0, 3);
+                    upgrades[i] = Random.Range(0, 4);
                 }
                 Player.Instance.isRandom = false;
             }
