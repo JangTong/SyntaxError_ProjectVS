@@ -5,12 +5,11 @@ using UnityEngine.TextCore.Text;
 
 public class Enemy : Character
 {
-    [SerializeField] Transform player;
-    [SerializeField] Sprite[] sprite;
-    [SerializeField] int enemyScore;
-    [SerializeField] int dropExp;
+    [SerializeField] protected Transform player;
+    [SerializeField] protected int enemyScore;
+    [SerializeField] protected int dropExp;
 
-    void Start()
+    protected void Start()
     {
         player = GameObject.Find("Player").GetComponent<Transform>();
     }
@@ -20,7 +19,7 @@ public class Enemy : Character
         TracePlayer();
     }
 
-    void TracePlayer()
+    protected void TracePlayer()
     {
         Vector2 dir;
         dir = (player.position - transform.position).normalized;
@@ -28,7 +27,7 @@ public class Enemy : Character
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90), Time.deltaTime * 10);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "EnemyBorder") Destroy(this.gameObject);
         if (collision.gameObject.tag == "PlayerProjectile")
@@ -39,7 +38,7 @@ public class Enemy : Character
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -47,21 +46,21 @@ public class Enemy : Character
         }
     }
 
-    void OnHit(int damage)
+    protected void OnHit(int damage)
     {
-        spriteRenderer.sprite = sprite[1];
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         if (health <= damage) Die();
         else health -= damage;
 
         Invoke("OffHit", 0.1f);
     }
 
-    void OffHit()
+    protected void OffHit()
     {
-        spriteRenderer.sprite = sprite[0];
+        spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
-    void Die()
+    protected void Die()
     {
         health = 0;
         isDie = true;

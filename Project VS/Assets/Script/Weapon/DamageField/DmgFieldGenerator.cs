@@ -16,7 +16,22 @@ public class DmgFieldGenerator : WeaponBase
 
     void Update()
     {
-        damage = Player.Instance.GetATKPower();
+        switch (weaponLev)
+        {
+            case 1:
+            case 2:
+            case 3:
+                damage = Player.Instance.GetATKPower();
+                break;
+            case 4:
+                damage = Player.Instance.GetATKPower() * 2;
+                break;
+            case 5:
+                damage = Player.Instance.GetATKPower() * 3;
+                break;
+            default:
+                break;
+        }
     }
     IEnumerator FireCorou()
     {
@@ -38,11 +53,11 @@ public class DmgFieldGenerator : WeaponBase
                     break;
                 case 4:
                     yield return new WaitForSeconds(1f);
-                    Fire(damage*2, 1.6f);
+                    Fire(damage, 1.6f);
                     break;
                 case 5:
                     yield return new WaitForSeconds(0.5f);
-                    Fire(damage*3, 2f);
+                    Fire(damage, 2f);
                     break;
                 default:
                     yield return new WaitForSeconds(1f);

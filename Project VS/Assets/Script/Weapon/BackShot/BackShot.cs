@@ -14,7 +14,22 @@ public class BackShot : WeaponBase
 
     void Update()
     {
-        damage = Player.Instance.GetATKPower();
+        switch (weaponLev)
+        {
+            case 1:
+            case 2:
+                damage = Player.Instance.GetATKPower();
+                break;
+            case 3:
+            case 4:
+                damage = Player.Instance.GetATKPower() * 2;
+                break;
+            case 5:
+                damage = Player.Instance.GetATKPower() * 3;
+                break;
+            default:
+                break;
+        }
     }
 
     IEnumerator FireCorou()
@@ -33,15 +48,15 @@ public class BackShot : WeaponBase
                     break;
                 case 3:
                     yield return new WaitForSeconds(0.5f);
-                    Fire_3(damage*2, velocity);
+                    Fire_3(damage, velocity);
                     break;
                 case 4:
                     yield return new WaitForSeconds(0.4f);
-                    Fire_4(damage*2, velocity);
+                    Fire_4(damage, velocity);
                     break;
                 case 5:
                     yield return new WaitForSeconds(0.03f);
-                    Fire_5(damage*3, velocity);
+                    Fire_5(damage, velocity);
                     break;
                 default:
                     yield return new WaitForSeconds(1f);

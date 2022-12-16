@@ -390,10 +390,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e784d407638ff90488d5617066f52030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy:
+  enemyArr_30:
   - {fileID: 4474761510153847325, guid: 1f77a1b48f98eb64ba8fc75ebd2bb5e6, type: 3}
   - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
   - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  enemyArr_60:
+  - {fileID: 4474761510153847325, guid: 1f77a1b48f98eb64ba8fc75ebd2bb5e6, type: 3}
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  enemyArr_90:
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  enemyArr_120: []
+  enemyArr_150: []
+  enemyArr_180: []
+  enemyArr_210: []
+  enemyArr_240: []
+  enemyArr_270: []
+  enemyArr_300: []
+  enemyBoss: {fileID: 4929097125004942281, guid: dbfb48b907a6c3941be638a422680c67, type: 3}
 --- !u!61 &83130262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -515,10 +537,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e784d407638ff90488d5617066f52030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy:
+  enemyArr_30:
   - {fileID: 4474761510153847325, guid: 1f77a1b48f98eb64ba8fc75ebd2bb5e6, type: 3}
   - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
   - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  enemyArr_60:
+  - {fileID: 4474761510153847325, guid: 1f77a1b48f98eb64ba8fc75ebd2bb5e6, type: 3}
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  enemyArr_90:
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  enemyArr_120: []
+  enemyArr_150: []
+  enemyArr_180: []
+  enemyArr_210: []
+  enemyArr_240: []
+  enemyArr_270: []
+  enemyArr_300: []
+  enemyBoss: {fileID: 4929097125004942281, guid: dbfb48b907a6c3941be638a422680c67, type: 3}
 --- !u!61 &210035754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1040,10 +1084,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e784d407638ff90488d5617066f52030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy:
+  enemyArr_30:
   - {fileID: 4474761510153847325, guid: 1f77a1b48f98eb64ba8fc75ebd2bb5e6, type: 3}
   - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
   - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  enemyArr_60:
+  - {fileID: 4474761510153847325, guid: 1f77a1b48f98eb64ba8fc75ebd2bb5e6, type: 3}
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  enemyArr_90:
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  enemyArr_120: []
+  enemyArr_150: []
+  enemyArr_180: []
+  enemyArr_210: []
+  enemyArr_240: []
+  enemyArr_270: []
+  enemyArr_300: []
+  enemyBoss: {fileID: 4929097125004942281, guid: dbfb48b907a6c3941be638a422680c67, type: 3}
 --- !u!61 &583637962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2052,10 +2118,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e784d407638ff90488d5617066f52030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy:
+  enemyArr_30:
   - {fileID: 4474761510153847325, guid: 1f77a1b48f98eb64ba8fc75ebd2bb5e6, type: 3}
   - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
   - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  enemyArr_60:
+  - {fileID: 4474761510153847325, guid: 1f77a1b48f98eb64ba8fc75ebd2bb5e6, type: 3}
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  - {fileID: 4474761510153847325, guid: e02fdf184ffafd341a7e56744713791e, type: 3}
+  enemyArr_90:
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 6f4f01b5348473b4993f234b6cde270e, type: 3}
+  - {fileID: 4474761510153847325, guid: 10d7ce29f17e77c4dba3a26242bed55c, type: 3}
+  enemyArr_120: []
+  enemyArr_150: []
+  enemyArr_180: []
+  enemyArr_210: []
+  enemyArr_240: []
+  enemyArr_270: []
+  enemyArr_300: []
+  enemyBoss: {fileID: 4929097125004942281, guid: dbfb48b907a6c3941be638a422680c67, type: 3}
 --- !u!61 &1452757913
 BoxCollider2D:
   m_ObjectHideFlags: 0

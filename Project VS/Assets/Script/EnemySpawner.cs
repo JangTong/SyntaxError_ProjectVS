@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject[] enemy;
+    public GameObject[] enemyArr_30;
+    public GameObject[] enemyArr_60;
+    public GameObject[] enemyArr_90;
+    public GameObject[] enemyArr_120;
+    public GameObject[] enemyArr_150;
+    public GameObject[] enemyArr_180;
+    public GameObject[] enemyArr_210;
+    public GameObject[] enemyArr_240;
+    public GameObject[] enemyArr_270;
+    public GameObject[] enemyArr_300;
+    public GameObject enemyBoss;
     private BoxCollider2D area;
 
 
@@ -21,9 +31,63 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnPos = GetRandomPosition(); //·£´ý À§Ä¡ return
             if (!Player.Instance.isDie)
             {
-                GameObject instance = Instantiate(enemy[Random.Range(0, enemy.Length)], spawnPos, Quaternion.identity);
+                if (GameManager.Instance.GetTimer() < 30)
+                {
+                    GameObject instance = Instantiate(enemyArr_30[Random.Range(0, enemyArr_30.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else if(GameManager.Instance.GetTimer() < 60)
+                {
+                    GameObject instance = Instantiate(enemyArr_60[Random.Range(0, enemyArr_60.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else if (GameManager.Instance.GetTimer() < 90)
+                {
+                    GameObject instance = Instantiate(enemyArr_90[Random.Range(0, enemyArr_90.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else if (GameManager.Instance.GetTimer() < 120)
+                {
+                    GameObject instance = Instantiate(enemyArr_120[Random.Range(0, enemyArr_120.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else if (GameManager.Instance.GetTimer() < 150)
+                {
+                    GameObject instance = Instantiate(enemyArr_150[Random.Range(0, enemyArr_150.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else if (GameManager.Instance.GetTimer() < 180)
+                {
+                    GameObject instance = Instantiate(enemyArr_180[Random.Range(0, enemyArr_180.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else if (GameManager.Instance.GetTimer() < 210)
+                {
+                    GameObject instance = Instantiate(enemyArr_210[Random.Range(0, enemyArr_210.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else if (GameManager.Instance.GetTimer() < 240)
+                {
+                    GameObject instance = Instantiate(enemyArr_240[Random.Range(0, enemyArr_240.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else if (GameManager.Instance.GetTimer() < 270)
+                {
+                    GameObject instance = Instantiate(enemyArr_270[Random.Range(0, enemyArr_270.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else if (GameManager.Instance.GetTimer() < 300)
+                {
+                    GameObject instance = Instantiate(enemyArr_300[Random.Range(0, enemyArr_300.Length)], spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
+                }
+                else
+                {
+                    GameObject instance = Instantiate(enemyBoss, spawnPos, Quaternion.identity);
+                    break;
+                }
             }
-            yield return new WaitForSeconds(1f);
+            else break;
         }
     }
 
