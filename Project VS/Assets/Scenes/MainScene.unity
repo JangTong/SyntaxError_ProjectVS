@@ -341,10 +341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01aed3b7bfc34bb4e870f7061986157a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
-  select1: {fileID: 0}
-  select2: {fileID: 0}
-  select3: {fileID: 0}
+  panel: {fileID: 1451890549}
+  select1: {fileID: 952932939}
+  select2: {fileID: 2075245022}
+  select3: {fileID: 886844552}
 --- !u!1 &83130259
 GameObject:
   m_ObjectHideFlags: 0
