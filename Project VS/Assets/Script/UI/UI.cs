@@ -14,7 +14,6 @@ public class UI : MonoBehaviour
     {
         health.maxValue = Player.Instance.GetMaxHealth();
         boost.maxValue = Player.Instance.GetBoosterCoolTime();
-        exp.maxValue = Player.Instance.maxExp;
     }
 
     void Update()
@@ -33,6 +32,7 @@ public class UI : MonoBehaviour
             boostcurtime = 0;
             boost.value = boost.maxValue;
         }
-        exp.value = Player.Instance.exp;            //exp
+        exp.maxValue = Player.Instance.maxExp;      //exp
+        exp.value = Player.Instance.exp;            
     }
 }

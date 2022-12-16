@@ -10,6 +10,8 @@ public class Player : Character
     public int playerLev;
     public int maxExp;
     public int exp;
+    public bool levelup;
+    public bool isRandom;
     bool isHit;
     bool onBooster;
     int boosterCoolTime;
@@ -24,7 +26,10 @@ public class Player : Character
 
         direction = 0;
         playerLev = 1;
+        maxExp = 10;
         exp = 0;
+        levelup = false;
+        isRandom = false;
         isHit = false;
         onBooster = false;
         boosterCoolTime = 5;
@@ -33,6 +38,7 @@ public class Player : Character
     void Update()
     {
         MovePlayer();
+        levelUp();
     }
 
     public static Player Instance
@@ -70,6 +76,18 @@ public class Player : Character
         }
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, direction), Time.deltaTime * 10);
         transform.Translate(dir.normalized * Time.deltaTime * moveSpeed, Space.World);
+    }
+
+    private void levelUp()
+    {
+        if(exp >= maxExp)
+        {
+            playerLev += 1;
+            maxExp += 10;
+            exp = 0;
+            levelup = true;
+            isRandom = true;
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
