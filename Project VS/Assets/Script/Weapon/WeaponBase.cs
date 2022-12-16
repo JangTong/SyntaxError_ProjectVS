@@ -9,7 +9,7 @@ public class WeaponBase : MonoBehaviour
     [SerializeField] protected float velocity;
     [SerializeField] protected float rateOfFire;
     [SerializeField] protected float projectileSize;
-    [SerializeField] protected int weaponLev;
+    [SerializeField] public int weaponLev;
 
     public float GetDamage() { return damage; }
     public void SetDamage(float damage) { this.damage = damage;}
