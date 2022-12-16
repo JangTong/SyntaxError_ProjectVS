@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -938644241, guid: 6520dda4a70dfbf40a55b7af39ecda4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -182,8 +182,6 @@ MonoBehaviour:
   playerLev: 0
   maxExp: 0
   exp: 0
-  levelup: 0
-  isRandom: 0
 --- !u!114 &4545554280846714189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile:
   - {fileID: 4173369573684702175, guid: 86df09c394b14124ba74d9abc4f63846, type: 3}
+  - {fileID: 4173369573684702175, guid: 29f3a5195e0ff2841896c9dcfd3e68d5, type: 3}
   damage: 0
   velocity: 0
   rateOfFire: 0
@@ -237,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile:
   - {fileID: 6654289880189661440, guid: 2d99fab0df366dd43b8ea0678cedb63f, type: 3}
+  - {fileID: 6654289880189661440, guid: 5d3d1379170f85b4b8b3e2e47e64b15f, type: 3}
   damage: 0
   velocity: 0
   rateOfFire: 0
@@ -256,7 +256,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile:
   - {fileID: 6313407669809520434, guid: 16b07098a13ba294086473987f251ea5, type: 3}
-  - {fileID: 6313407669809520434, guid: 3091e140ee344d44297cfd51cbf41421, type: 3}
   damage: 0
   velocity: 0
   rateOfFire: 0

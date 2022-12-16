@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     static GameManager instance = null;
 
     bool isPause = false;
-    float gameTimer = 0;
+    [SerializeField] float gameTimer = 0;
+    [SerializeField] public int gameScore = 0;
 
     void Awake()
     {

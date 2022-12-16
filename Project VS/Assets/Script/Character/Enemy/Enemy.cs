@@ -7,6 +7,8 @@ public class Enemy : Character
 {
     [SerializeField] Transform player;
     [SerializeField] Sprite[] sprite;
+    [SerializeField] int enemyScore;
+    [SerializeField] int dropExp;
 
     void Start()
     {
@@ -41,22 +43,14 @@ public class Enemy : Character
     {
         if (collision.gameObject.tag == "Player")
         {
-            Player player = collision.gameObject.GetComponent<Player>();
-            if (player.GetIsHit() && player.GetBooster()) OnHit(player.GetATKPower());
+            if (Player.Instance.GetIsHit() && Player.Instance.GetBooster()) OnHit(Player.Instance.GetATKPower());
         }
-
     }
 
     void OnHit(int damage)
     {
         spriteRenderer.sprite = sprite[1];
-        if(health <= damage)
-        {
-            health = 0;
-            isDie = true;
-            Player.Instance.exp += 1;
-            Destroy(this.gameObject);
-        }
+        if (health <= damage) Die();
         else health -= damage;
 
         Invoke("OffHit", 0.1f);
@@ -65,5 +59,14 @@ public class Enemy : Character
     void OffHit()
     {
         spriteRenderer.sprite = sprite[0];
+    }
+
+    void Die()
+    {
+        health = 0;
+        isDie = true;
+        Player.Instance.exp += dropExp;
+        GameManager.Instance.gameScore += enemyScore;
+        Destroy(this.gameObject);
     }
 }

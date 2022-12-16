@@ -112,7 +112,7 @@ public class BackShot : WeaponBase
     }
     void Fire_5(float damage, float velocity)
     {
-        GameObject bullet = Instantiate(projectile[0], gameObject.transform.position, Quaternion.Euler(new Vector3(0, 0,Random.Range(0, 360))));
+        GameObject bullet = Instantiate(projectile[1], gameObject.transform.position, Quaternion.Euler(new Vector3(0, 0,Random.Range(0, 360))));
         GunProjectile sgbullet = bullet.GetComponent<GunProjectile>();
         sgbullet.SetDamage(damage);
         sgbullet.SetVelocity(velocity);

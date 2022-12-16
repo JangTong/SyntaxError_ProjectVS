@@ -8,7 +8,6 @@ public class Laser : WeaponBase
     {
         weaponLev = 0;
         StartCoroutine(FireCorou());
-        velocity = 10;
     }
 
     void Update()
@@ -73,7 +72,7 @@ public class Laser : WeaponBase
     }
     void Fire_5(float damage, float velocity)
     {
-        GameObject laser = Instantiate(projectile[0], gameObject.transform.position + new Vector3(5 * Mathf.Cos((transform.rotation.eulerAngles.z + 90) * Mathf.Deg2Rad), 5 * Mathf.Sin((transform.rotation.eulerAngles.z + 90) * Mathf.Deg2Rad), 0), gameObject.transform.rotation);
+        GameObject laser = Instantiate(projectile[1], gameObject.transform.position + new Vector3(5 * Mathf.Cos((transform.rotation.eulerAngles.z + 90) * Mathf.Deg2Rad), 5 * Mathf.Sin((transform.rotation.eulerAngles.z + 90) * Mathf.Deg2Rad), 0), gameObject.transform.rotation);
         LaserProjectile compLaser = laser.GetComponent<LaserProjectile>();
         compLaser.SetDamage(damage);
     }
