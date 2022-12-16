@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemyArr_270;
     public GameObject[] enemyArr_300;
     public GameObject enemyBoss;
+    public GameObject healItem;
 
     private BoxCollider2D area;
 
@@ -23,6 +24,7 @@ public class EnemySpawner : MonoBehaviour
     {
         area = GetComponent<BoxCollider2D>();
         StartCoroutine(Spawn());
+        StartCoroutine(SpawnHeal());
     }
 
     private IEnumerator Spawn()
@@ -89,6 +91,15 @@ public class EnemySpawner : MonoBehaviour
                 }
             }
             else break;
+        }
+    }
+    private IEnumerator SpawnHeal()
+    {
+        while (true)
+        {
+            Vector3 spawnPos = GetRandomPosition();
+            GameObject instance = Instantiate(healItem, spawnPos, Quaternion.identity);
+            yield return new WaitForSeconds(30f);
         }
     }
 
