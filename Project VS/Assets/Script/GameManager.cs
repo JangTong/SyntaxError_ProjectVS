@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     static GameManager instance = null;
 
+    [SerializeField] public bool isClear = false;
     [SerializeField] bool isPause = false;
     [SerializeField] float gameTimer = 0;
     [SerializeField] public int gameScore = 0;

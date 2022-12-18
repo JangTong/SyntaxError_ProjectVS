@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameOver : MonoBehaviour
 {
     public GameObject panel;
     public Button restart;
     public Button exit;
-    // Start is called before the first frame update
+    public TMP_Text endingText;
+    
     void Start()
     {
         restart = transform.Find("Restart").GetComponent<Button>();
@@ -16,11 +18,12 @@ public class GameOver : MonoBehaviour
         panel.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Player.Instance.isDie)
+        if(GameManager.Instance.isClear || Player.Instance.isDie)
         {
+            if(GameManager.Instance.isClear) endingText.text = "CLEAR!";
+            else if(Player.Instance.isDie) endingText.text = "GAME OVER";
             panel.SetActive(true);
             restart.onClick.AddListener(Restart);
             exit.onClick.AddListener(Exit);
