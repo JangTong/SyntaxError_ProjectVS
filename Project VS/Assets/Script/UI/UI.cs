@@ -18,6 +18,7 @@ public class UI : MonoBehaviour
     DmgFieldGenerator DamageFieldLV;
     Laser LaserLV;
     private float boostcurtime;
+    string timertext;
 
     void Start()
     {
@@ -48,9 +49,11 @@ public class UI : MonoBehaviour
         exp.maxValue = Player.Instance.maxExp;      //exp
         exp.value = Player.Instance.exp;        
 
+        if(!Player.Instance.isDie) timertext = ((int)(GameManager.Instance.GetTimer() / 60)).ToString("D2") + ":" + ((int)(GameManager.Instance.GetTimer() % 60)).ToString("D2");
+
         PlayerLV.text = "Level: " + Player.Instance.playerLev;
         WepLV.text = "Gun: " + GunLV.weaponLev + "\n" + "BackShot: " + BackShotLV.weaponLev + "\n" + "DamageField: " + DamageFieldLV.weaponLev + "\n" + "Laser: " + LaserLV.weaponLev;
-        Timer.text = ((int)(GameManager.Instance.GetTimer() / 60)).ToString("D2") + ":" + ((int)(GameManager.Instance.GetTimer() % 60)).ToString("D2");
+        Timer.text = timertext;
         Score.text = "Score: " + GameManager.Instance.gameScore;
     }
 }

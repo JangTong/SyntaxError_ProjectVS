@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         gameTimer += Time.deltaTime;
+
+        if(Input.GetKey(KeyCode.Escape)) ExitGame();
     }
 
     public static GameManager Instance
@@ -65,5 +67,7 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameScore = 0;
+        gameTimer = 0;
     }
 }
