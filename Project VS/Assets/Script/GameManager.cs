@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     static GameManager instance = null;
 
-    bool isPause = false;
+    [SerializeField] bool isPause = false;
     [SerializeField] float gameTimer = 0;
     [SerializeField] public int gameScore = 0;
 
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public float GetTimer () { return gameTimer; }
 
-    //°ÔÀÓ ½Ã°£ Á¶ÀÛ ÇÔ¼ö
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     public void PauseGame()
     {
         if (!isPause)

@@ -15,6 +15,8 @@ public class Upgrade : MonoBehaviour
     BackShot BackShotLV;
     DmgFieldGenerator DamageFieldLV;
     Laser LaserLV;
+    int upgradeCount;
+    int upgradeNum;
 
     void Start()
     {
@@ -27,7 +29,10 @@ public class Upgrade : MonoBehaviour
 
     void Update()
     {
-        if(Player.Instance.levelup)
+        upgradeCount = 0;
+        for(int i = 0; i<4; i++) if(wepLevel(i) == 5) upgradeCount += 1;
+
+        if(Player.Instance.levelup && (upgradeCount != 4))
         {
             panel.SetActive(true);
 
@@ -35,15 +40,23 @@ public class Upgrade : MonoBehaviour
             {
                 for(int i = 0; i<3; i++)
                 {
-                    upgrades[i] = Random.Range(0, 4);
+                    if(i >= (4 - upgradeCount)) break;
+                    do
+                    {
+                        upgradeNum = Random.Range(0, 4);
+                        upgrades[i] = upgradeNum;
+                    }
+                    while(wepLevel(upgradeNum) == 5);
+                    
                 }
                 Player.Instance.isRandom = false;
             }
-            
 
             select1.text = wep[upgrades[0]];
-            select2.text = wep[upgrades[1]];
-            select3.text = wep[upgrades[2]];
+            if(upgradeCount == 3) select2.text = " ";
+            else select2.text = wep[upgrades[1]];
+            if(upgradeCount >= 2) select3.text = " ";
+            else select3.text = wep[upgrades[2]];
 
             if(Input.GetKey(KeyCode.Alpha1))
             {
@@ -63,6 +76,8 @@ public class Upgrade : MonoBehaviour
                 Player.Instance.levelup = false;
                 panel.SetActive(false);
             }
+
+            if(Player.Instance.levelup == false) GameManager.Instance.ResumeGame();
         }
     }
 
@@ -72,5 +87,13 @@ public class Upgrade : MonoBehaviour
         else if(a == 1) BackShotLV.weaponLev += 1;
         else if(a == 2) DamageFieldLV.weaponLev += 1;
         else LaserLV.weaponLev += 1;
+    }
+
+    int wepLevel(int a)
+    {
+        if(a == 0) return GunLV.weaponLev;
+        else if(a == 1) return BackShotLV.weaponLev;
+        else if(a == 2) return DamageFieldLV.weaponLev;
+        else return LaserLV.weaponLev;
     }
 }

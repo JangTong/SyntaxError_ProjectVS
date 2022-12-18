@@ -87,6 +87,7 @@ public class Player : Character
             exp = 0;
             levelup = true;
             isRandom = true;
+            GameManager.Instance.PauseGame();
         }
     }
 
