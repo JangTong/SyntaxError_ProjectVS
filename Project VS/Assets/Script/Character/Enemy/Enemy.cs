@@ -8,7 +8,8 @@ public class Enemy : Character
     [SerializeField] protected Transform player;
     [SerializeField] protected int enemyScore;
     [SerializeField] protected int dropExp;
-    Color defaultColor;
+    
+    protected Color defaultColor;
 
     protected void Start()
     {
@@ -16,7 +17,7 @@ public class Enemy : Character
         defaultColor = spriteRenderer.color;
     }
 
-    void Update()
+    protected void Update()
     {
         TracePlayer();
     }

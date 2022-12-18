@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
 
     public float GetTimer () { return gameTimer; }
 
-    //���� �ð� ���� �Լ�
     public void PauseGame()
     {
         if (!isPause)

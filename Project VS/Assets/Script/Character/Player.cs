@@ -100,6 +100,15 @@ public class Player : Character
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            OnHit(enemy.GetATKPower());
+        }
+    }
+
     public void OnHit(int damage)
     {
         if (health <= damage && !isHit)

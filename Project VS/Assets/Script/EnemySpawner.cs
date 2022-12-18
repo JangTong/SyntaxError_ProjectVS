@@ -84,9 +84,10 @@ public class EnemySpawner : MonoBehaviour
                     GameObject instance = Instantiate(enemyArr_300[Random.Range(0, enemyArr_300.Length)], spawnPos, Quaternion.identity);
                     yield return new WaitForSeconds(0.7f);
                 }
-                else
+                else if(GameManager.Instance.GetTimer() >= 300)
                 {
                     GameObject instance = Instantiate(enemyBoss, spawnPos, Quaternion.identity);
+                    yield return new WaitForSeconds(0.7f);
                     break;
                 }
             }
