@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7431529995326980795, guid: 5547e92425a5b584ba72bba3566474f0, type: 3}
+  m_Sprite: {fileID: 874343242196921964, guid: 5547e92425a5b584ba72bba3566474f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,14 +104,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.25, y: 0.375}
+    oldSize: {x: 0.33333334, y: 0.45833334}
     newSize: {x: 0.25, y: 0.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.375}
+  m_Size: {x: 0.33333334, y: 0.45833334}
   m_EdgeRadius: 0
 --- !u!50 &1756687029126079959
 Rigidbody2D:
@@ -146,10 +146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea2ef8b9592cf9488ab474991792894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  player: {fileID: 0}
-  compPl: {fileID: 0}
+  projectile:
+  - {fileID: 0}
   damage: 0
   velocity: 0
   rateOfFire: 0
   projectileSize: 0
+  weaponLev: 0

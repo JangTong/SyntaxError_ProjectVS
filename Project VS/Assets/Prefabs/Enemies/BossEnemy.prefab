@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4929097125004942292}
   - component: {fileID: 4929097125004942295}
-  - component: {fileID: 4929097125004942294}
   - component: {fileID: 4929097125004942291}
   - component: {fileID: 4929097125004942290}
   - component: {fileID: 7084735725045396164}
@@ -88,26 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4929097125004942294
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4929097125004942281}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 095fdf6a31f848341b9227e3553d20c2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &4929097125004942291
 Rigidbody2D:
   serializedVersion: 4
@@ -169,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   health: 0
-  maxHealth: 100
+  maxHealth: 5000
   atkPower: 5
   isDie: 0
   player: {fileID: 0}

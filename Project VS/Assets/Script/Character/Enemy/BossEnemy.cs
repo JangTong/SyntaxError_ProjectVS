@@ -10,12 +10,14 @@ public class BossEnemy : Enemy
 
     enum State { walk, strike, shot, spawn};
     State state = State.walk;
+    int defSpeed;
     
     Vector2 dir;
     bool onStrike = false;
     void Start()
     {
         base.Start();
+        defSpeed = moveSpeed;
         StartCoroutine(BossPatern());
     }
 
@@ -43,20 +45,18 @@ public class BossEnemy : Enemy
                 dir = (player.position - transform.position).normalized;
                 yield return new WaitForSeconds(1f);
             }
+            moveSpeed = 0;
+
+            state = State.shot;
+            StartCoroutine(EnemyShot());
+            yield return new WaitForSeconds(4.5f);
+            moveSpeed = defSpeed;
 
             state = State.walk;
-            moveSpeed /= 8;
             onStrike = false;
             yield return new WaitForSeconds(3f);
             DropItems();
             yield return new WaitForSeconds(3f);
-
-            state = State.shot;
-            for (int i = 0; i < 5; i++)
-            {
-                EnemyShot();
-                yield return new WaitForSeconds(1f);
-            }
 
             state = State.spawn;
             for (int i = 0; i < 2; i++)
@@ -79,16 +79,33 @@ public class BossEnemy : Enemy
         GameObject instance_2 = Instantiate(enemyCarrier[Random.Range(0, enemyCarrier.Length)], transform.position + new Vector3(1 * Mathf.Cos((transform.rotation.eulerAngles.z - 180) * Mathf.Deg2Rad), 1 * Mathf.Sin((transform.rotation.eulerAngles.z - 180) * Mathf.Deg2Rad), 0), transform.rotation);
     }
 
-    void EnemyShot()
+    IEnumerator EnemyShot()
     {
-        for (int i = 0; i < 18; i++)
+        void Shot(int angle)
         {
-            GameObject bullet = Instantiate(enemyBullet, gameObject.transform.position, gameObject.transform.rotation * Quaternion.Euler(new Vector3(0, 0, i * 20)));
+            for (int i = 0; i < 18; i++)
+            {
+                GameObject bullet = Instantiate(enemyBullet, gameObject.transform.position, Quaternion.Euler(new Vector3(0, 0, angle + i * 20)));
+            }
         }
+
+        for (int i = 0; i < 10; i++)
+        {
+            Shot(i * 7);
+            yield return new WaitForSeconds(0.2f);
+        }
+        yield return new WaitForSeconds(0.5f);
+
+        for (int i = 0; i < 5; i++)
+        {
+            Shot(i * 10);
+            yield return new WaitForSeconds(0.4f);
+        }
+
     }
     void DropItems()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 3; i++)
         {
             GameObject bullet = Instantiate(item, gameObject.transform.position, gameObject.transform.rotation * Quaternion.Euler(new Vector3(0, 0, i * 30)));
         }

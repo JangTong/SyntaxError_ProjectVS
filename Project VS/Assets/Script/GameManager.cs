@@ -69,5 +69,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         gameScore = 0;
         gameTimer = 0;
+        isClear = false;
     }
 }

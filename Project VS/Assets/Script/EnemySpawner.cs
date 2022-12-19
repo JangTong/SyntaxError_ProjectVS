@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemyArr_240;
     public GameObject[] enemyArr_270;
     public GameObject[] enemyArr_300;
-    public GameObject enemyBoss;
+    public GameObject[] enemyElite;
     public GameObject healItem;
 
     private BoxCollider2D area;
@@ -37,7 +37,7 @@ public class EnemySpawner : MonoBehaviour
                 if (GameManager.Instance.GetTimer() < 30)
                 {
                     GameObject instance = Instantiate(enemyArr_30[Random.Range(0, enemyArr_30.Length)], spawnPos, Quaternion.identity);
-                    yield return new WaitForSeconds(0.7f); //delay
+                    yield return new WaitForSeconds(1f); //delay
                 }
                 else if(GameManager.Instance.GetTimer() < 60)
                 {
@@ -52,7 +52,7 @@ public class EnemySpawner : MonoBehaviour
                 else if (GameManager.Instance.GetTimer() < 120)
                 {
                     GameObject instance = Instantiate(enemyArr_120[Random.Range(0, enemyArr_120.Length)], spawnPos, Quaternion.identity);
-                    yield return new WaitForSeconds(0.7f);
+                    yield return new WaitForSeconds(0.5f);
                 }
                 else if (GameManager.Instance.GetTimer() < 150)
                 {
@@ -86,7 +86,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else if(GameManager.Instance.GetTimer() >= 300)
                 {
-                    GameObject instance = Instantiate(enemyBoss, spawnPos, Quaternion.identity);
+                    GameObject instance = Instantiate(enemyElite[4], spawnPos, Quaternion.identity);
                     yield return new WaitForSeconds(0.7f);
                     break;
                 }

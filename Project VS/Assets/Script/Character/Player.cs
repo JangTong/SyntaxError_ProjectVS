@@ -12,7 +12,7 @@ public class Player : Character
     public int exp;
     public bool levelup;
     public bool isRandom;
-    bool isHit;
+    [SerializeField]bool isHit;
     bool onBooster;
     int boosterCoolTime;
     static Player instance = null;
@@ -26,7 +26,7 @@ public class Player : Character
 
         direction = 0;
         playerLev = 1;
-        maxExp = 10;
+        maxExp = 15;
         exp = 0;
         levelup = false;
         isRandom = false;
@@ -83,10 +83,12 @@ public class Player : Character
         if (exp >= maxExp)
         {
             playerLev += 1;
-            maxExp += 10;
+            if (playerLev < 6) maxExp = 10 * playerLev;
+            else maxExp = (int)(75 * Mathf.Pow(1.3f, (playerLev - 5)));
             exp = 0;
             levelup = true;
             isRandom = true;
+
             GameManager.Instance.PauseGame();
         }
     }

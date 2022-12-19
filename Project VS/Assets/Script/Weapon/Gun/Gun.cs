@@ -128,11 +128,11 @@ public class Gun : WeaponBase
         GameObject bulletR = Instantiate(projectile[1], gameObject.transform.position + new Vector3(0.4f * Mathf.Cos((bulletRPos.eulerAngles.z + 45f) * Mathf.Deg2Rad), 0.4f * Mathf.Sin((bulletRPos.eulerAngles.z + 45f) * Mathf.Deg2Rad), 0), gameObject.transform.rotation);
         GameObject bulletR_2 = Instantiate(projectile[1], gameObject.transform.position + new Vector3(0.4f * Mathf.Cos(bulletRPos.eulerAngles.z * Mathf.Deg2Rad), 0.4f * Mathf.Sin(bulletRPos.eulerAngles.z * Mathf.Deg2Rad), 0), gameObject.transform.rotation);
 
-        GunProjectile1 sgbulletL = bulletL.GetComponent<GunProjectile1>();
-        GunProjectile1 sgbulletL_2 = bulletL_2.GetComponent<GunProjectile1>();
-        GunProjectile1 sgbulletM = bulletM.GetComponent<GunProjectile1>();
-        GunProjectile1 sgbulletR = bulletR.GetComponent<GunProjectile1>();
-        GunProjectile1 sgbulletR_2 = bulletR_2.GetComponent<GunProjectile1>();
+        GunProjectile sgbulletL = bulletL.GetComponent<GunProjectile>();
+        GunProjectile sgbulletL_2 = bulletL_2.GetComponent<GunProjectile>();
+        GunProjectile sgbulletM = bulletM.GetComponent<GunProjectile>();
+        GunProjectile sgbulletR = bulletR.GetComponent<GunProjectile>();
+        GunProjectile sgbulletR_2 = bulletR_2.GetComponent<GunProjectile>();
 
         sgbulletL.SetDamage(damage);
         sgbulletL_2.SetDamage(damage);

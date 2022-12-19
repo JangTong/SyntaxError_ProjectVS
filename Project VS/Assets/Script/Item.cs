@@ -15,7 +15,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            int afterHp = Player.Instance.GetHealth() + 1;
+            int afterHp = Player.Instance.GetHealth() + 2;
             if(afterHp > 20) Player.Instance.SetHealth(20);
             else Player.Instance.SetHealth(afterHp);
             Destroy(gameObject);
