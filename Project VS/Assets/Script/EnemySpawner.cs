@@ -82,7 +82,7 @@ public class EnemySpawner : MonoBehaviour
                 else if (GameManager.Instance.GetTimer() < 300)
                 {
                     GameObject instance = Instantiate(enemyArr_300[Random.Range(0, enemyArr_300.Length)], spawnPos, Quaternion.identity);
-                    yield return new WaitForSeconds(1);
+                    yield return new WaitForSeconds(2);
                 }
                 else if(GameManager.Instance.GetTimer() >= 300)
                 {
