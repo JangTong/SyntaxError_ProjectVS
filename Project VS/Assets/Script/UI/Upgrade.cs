@@ -32,51 +32,59 @@ public class Upgrade : MonoBehaviour
         upgradeCount = 0;
         for(int i = 0; i<4; i++) if(wepLevel(i) == 5) upgradeCount += 1;
 
-        if(Player.Instance.levelup && (upgradeCount != 4))
+        if(Player.Instance.levelup)
         {
-            panel.SetActive(true);
-
-            if(Player.Instance.isRandom)
+            if(upgradeCount == 4)
             {
-                for(int i = 0; i<3; i++)
+                Player.Instance.levelup = false;
+            }
+
+            else
+            {
+                panel.SetActive(true);
+
+                if(Player.Instance.isRandom)
                 {
-                    if(i >= (4 - upgradeCount)) break;
-                    do
+                    for(int i = 0; i<3; i++)
                     {
-                        upgradeNum = Random.Range(0, 4);
-                        upgrades[i] = upgradeNum;
+                        if(i >= (4 - upgradeCount)) break;
+                        do
+                        {
+                            upgradeNum = Random.Range(0, 4);
+                            upgrades[i] = upgradeNum;
+                        }
+                        while(wepLevel(upgradeNum) == 5);
+
                     }
-                    while(wepLevel(upgradeNum) == 5);
-                    
+                    Player.Instance.isRandom = false;
                 }
-                Player.Instance.isRandom = false;
-            }
 
-            select1.text = wep[upgrades[0]];
-            if(upgradeCount == 3) select2.text = " ";
-            else select2.text = wep[upgrades[1]];
-            if(upgradeCount >= 2) select3.text = " ";
-            else select3.text = wep[upgrades[2]];
+                select1.text = wep[upgrades[0]];
+                if(upgradeCount == 3) select2.text = " ";
+                else select2.text = wep[upgrades[1]];
+                if(upgradeCount >= 2) select3.text = " ";
+                else select3.text = wep[upgrades[2]];
 
-            if(Input.GetKey(KeyCode.Alpha1))
-            {
-                wepUpgrade(upgrades[0]);
-                Player.Instance.levelup = false;
-                panel.SetActive(false);
+                if(Input.GetKey(KeyCode.Alpha1))
+                {
+                    wepUpgrade(upgrades[0]);
+                    Player.Instance.levelup = false;
+                    panel.SetActive(false);
+                }
+                else if(Input.GetKey(KeyCode.Alpha2))
+                {
+                    wepUpgrade(upgrades[1]);
+                    Player.Instance.levelup = false;
+                    panel.SetActive(false);
+                }
+                else if(Input.GetKey(KeyCode.Alpha3))
+                {
+                    wepUpgrade(upgrades[2]);
+                    Player.Instance.levelup = false;
+                    panel.SetActive(false);
+                }
             }
-            else if(Input.GetKey(KeyCode.Alpha2))
-            {
-                wepUpgrade(upgrades[1]);
-                Player.Instance.levelup = false;
-                panel.SetActive(false);
-            }
-            else if(Input.GetKey(KeyCode.Alpha3))
-            {
-                wepUpgrade(upgrades[2]);
-                Player.Instance.levelup = false;
-                panel.SetActive(false);
-            }
-
+            
             if(Player.Instance.levelup == false) GameManager.Instance.ResumeGame();
         }
     }
