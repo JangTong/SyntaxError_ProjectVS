@@ -74,7 +74,7 @@ public class Player : Character
             else if (inputY == 0) direction = 270;
             else if (inputY == -1) direction = 225;
         }
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, direction), Time.deltaTime * 10);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, direction), Time.deltaTime * 30);
         transform.Translate(dir.normalized * Time.deltaTime * moveSpeed, Space.World);
     }
 
@@ -140,13 +140,13 @@ public class Player : Character
         //booster on
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         onBooster = true;
-        moveSpeed *= 5;
+        moveSpeed *= 7;
         isHit = true;
         yield return new WaitForSeconds(0.2f);
 
         //booster off and cooling time start
         spriteRenderer.color = new Color(1, 1, 1, 1);
-        moveSpeed /= 5;
+        moveSpeed /= 7;
         isHit = false;
         yield return new WaitForSeconds(boosterCoolTime);
         onBooster = false;

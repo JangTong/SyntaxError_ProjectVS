@@ -155,7 +155,7 @@ MonoBehaviour:
   enemyScore: 10
   dropExp: 5
   enemyCarrier:
-  - {fileID: 4929097125004942281, guid: ca01a0e8120d26747b349e3fa006ddc3, type: 3}
-  - {fileID: 4929097125004942281, guid: ca01a0e8120d26747b349e3fa006ddc3, type: 3}
+  - {fileID: 4474761510153847325, guid: 2701feff2d93a814e895cc05e0b8c07a, type: 3}
+  - {fileID: 4474761510153847325, guid: a02e47905dc73774eab05de761376c75, type: 3}
   enemyBullet: {fileID: 4474761510153847325, guid: f8d52a001857b0346a5c59725f96a894, type: 3}
   item: {fileID: 3517832263415406312, guid: 95a93161ad51a254ca393bd2d79c275e, type: 3}

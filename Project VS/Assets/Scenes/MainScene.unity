@@ -598,6 +598,11 @@ MonoBehaviour:
   - {fileID: 4474761510153847325, guid: d48749b7edd0de64d969364601e89f68, type: 3}
   - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   enemyArr_270:
   - {fileID: 4474761510153847325, guid: 1dc0c6e899ba8744e88325de8561c38b, type: 3}
   - {fileID: 4474761510153847325, guid: e9a44dd7976bf3045a8053fd989f8a58, type: 3}
@@ -966,6 +971,11 @@ MonoBehaviour:
   - {fileID: 4474761510153847325, guid: 28804a02bb96c1c4a8640e7ead2aafbf, type: 3}
   - {fileID: 4474761510153847325, guid: 01b179457f9cc4f47b7b234dd3ed3a94, type: 3}
   - {fileID: 4474761510153847325, guid: d48749b7edd0de64d969364601e89f68, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   enemyArr_270:
@@ -2086,6 +2096,11 @@ MonoBehaviour:
   - {fileID: 4474761510153847325, guid: 28804a02bb96c1c4a8640e7ead2aafbf, type: 3}
   - {fileID: 4474761510153847325, guid: 01b179457f9cc4f47b7b234dd3ed3a94, type: 3}
   - {fileID: 4474761510153847325, guid: d48749b7edd0de64d969364601e89f68, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   enemyArr_270:
@@ -3874,6 +3889,11 @@ MonoBehaviour:
   - {fileID: 4474761510153847325, guid: d48749b7edd0de64d969364601e89f68, type: 3}
   - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
+  - {fileID: 4474761510153847325, guid: 028a8d8fe2a7d31419202f591220aa1f, type: 3}
   enemyArr_270:
   - {fileID: 4474761510153847325, guid: 1dc0c6e899ba8744e88325de8561c38b, type: 3}
   - {fileID: 4474761510153847325, guid: e9a44dd7976bf3045a8053fd989f8a58, type: 3}
@@ -5398,9 +5418,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2653031615731198376, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: weaponLev
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653031615731198377, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: weaponLev
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653031615731198384, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: weaponLev
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2653031616179527116, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653031616179527127, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641901645484465140, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: isHit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641901645484465140, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545554280846714189, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
+      propertyPath: weaponLev
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7072bf8f8b75b4b42b834768d6cd788d, type: 3}
