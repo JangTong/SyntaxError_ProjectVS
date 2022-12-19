@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8414746945848482281}
   m_Layer: 0
   m_Name: EnergyBolt
-  m_TagString: Enemy
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
