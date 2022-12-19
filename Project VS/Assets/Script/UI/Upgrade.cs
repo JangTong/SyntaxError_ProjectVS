@@ -47,7 +47,6 @@ public class Upgrade : MonoBehaviour
                 {
                     for(int i = 0; i<3; i++)
                     {
-                        if(i >= (4 - upgradeCount)) break;
                         do
                         {
                             upgradeNum = Random.Range(0, 4);
@@ -60,10 +59,8 @@ public class Upgrade : MonoBehaviour
                 }
 
                 select1.text = wep[upgrades[0]];
-                if(upgradeCount == 3) select2.text = " ";
-                else select2.text = wep[upgrades[1]];
-                if(upgradeCount >= 2) select3.text = " ";
-                else select3.text = wep[upgrades[2]];
+                select2.text = wep[upgrades[1]];
+                select3.text = wep[upgrades[2]];
 
                 if(Input.GetKey(KeyCode.Alpha1))
                 {
