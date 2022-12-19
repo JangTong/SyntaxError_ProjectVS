@@ -95,7 +95,7 @@ public class Player : Character
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyBullet")
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             OnHit(enemy.GetATKPower());
@@ -104,7 +104,7 @@ public class Player : Character
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyBullet")
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             OnHit(enemy.GetATKPower());

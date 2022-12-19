@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4474761510153847321}
   - component: {fileID: 4474761510153847320}
   m_Layer: 0
-  m_Name: EnemyC_2
+  m_Name: EnemyC_5
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -8421458170528590454, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,9 +148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   health: 0
-  maxHealth: 7
-  atkPower: 2
+  maxHealth: 11
+  atkPower: 3
   isDie: 0
   player: {fileID: 0}
   enemyScore: 3
-  dropExp: 1
+  dropExp: 20

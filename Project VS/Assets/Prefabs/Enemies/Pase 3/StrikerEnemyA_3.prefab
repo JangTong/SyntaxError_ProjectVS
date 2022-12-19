@@ -149,8 +149,8 @@ MonoBehaviour:
   moveSpeed: 8
   health: 0
   maxHealth: 3
-  atkPower: 1
+  atkPower: 2
   isDie: 0
   player: {fileID: 0}
-  enemyScore: 1
-  dropExp: 1
+  enemyScore: 10
+  dropExp: 5

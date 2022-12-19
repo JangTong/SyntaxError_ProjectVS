@@ -152,5 +152,5 @@ MonoBehaviour:
   atkPower: 2
   isDie: 0
   player: {fileID: 0}
-  enemyScore: 1
-  dropExp: 1
+  enemyScore: 2
+  dropExp: 2

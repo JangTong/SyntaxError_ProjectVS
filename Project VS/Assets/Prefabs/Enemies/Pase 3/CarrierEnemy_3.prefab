@@ -75,9 +75,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 2192450021786810173, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
-  m_Color: {r: 0.77855176, g: 0.55345905, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9823839, b: 0.5529412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -149,10 +149,11 @@ MonoBehaviour:
   moveSpeed: 2
   health: 0
   maxHealth: 10
-  atkPower: 3
+  atkPower: 4
   isDie: 0
   player: {fileID: 0}
-  enemyScore: 5
-  dropExp: 5
+  enemyScore: 10
+  dropExp: 10
   enemyCarrier:
-  - {fileID: 4474761510153847325, guid: b612df52904620140ae02610fb008287, type: 3}
+  - {fileID: 4474761510153847325, guid: 9dd047147e29c0048a25a273b0f2d209, type: 3}
+  spawnRate: 2

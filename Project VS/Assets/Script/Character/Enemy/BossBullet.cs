@@ -17,6 +17,6 @@ public class BossBullet : Enemy
 
     private void MoveProjectile()
     {
-        transform.Translate(new Vector2(0, Time.deltaTime * moveSpeed));
+        transform.Translate(new Vector2(0, -Time.deltaTime * moveSpeed));
     }
 }
